@@ -8,21 +8,6 @@ The **iDempiere AIMA (AI-Based Manufacturing Infrastructure & Architecture)** in
 
 ![TRADITIONAL vs. AIMA ERP PARADIGM](assets/images/ch1/1-1-TRADITIONAL-vs-AIMA-ERP-PARADIGM.png)
 
-```
-+---------------------------------------------------------------------------------------------------+
-|                                  TRADITIONAL vs. AIMA ERP PARADIGM                                |
-+---------------------------------------------------------------------------------------------------+
-|  TRADITIONAL ERP                                   |  iDempiere AIMA                              |
-|  --------------------------------------------------|  ------------------------------------------  |
-|  * Static, Batch-Based MRP (Nightly/Weekly)        |  * Real-Time Event-Driven Smart MRP          |
-|  * Historical Reporting & Reactive Maintenance     |  * Predictive Maintenance & Anomaly Alerting |
-|  * Monolithic Deployments with Downtime            |  * OSGi Hot-Swappable Micro-Modules          |
-|  * Manual Capacity & Material Optimization         |  * Automated ML-Driven Scheduling Optimization|
-|  * Siloed Database Tables with High Bottlenecks    |  * Distributed Sharded Database (Citus)      |
-+---------------------------------------------------------------------------------------------------+
-
-```
-
 ### Core Strategic Pillars
 
 1. **Autonomous Operational Intelligence**: Integrating machine learning (ML) models directly into the ERP core via OSGi dynamic extensions. This enables predictive maintenance, automated quality assurance via computer vision/sensor ingestion, and real-time material replenishment.
@@ -31,34 +16,11 @@ The **iDempiere AIMA (AI-Based Manufacturing Infrastructure & Architecture)** in
 4. **Zero-Downtime Adaptability**: Leveraging OSGi (Open Services Gateway initiative) dynamic bundle capabilities to enable continuous extension hot-deployments, live patching, and zero-downtime updates to critical business logic.
 5. **Infrastructure-as-Code (IaC) Automation**: Orchestrated entirely via Ansible Automation Platform (AAP) and modular playbooks, ensuring absolute configuration repeatability and zero manual drift across environments.
 
----
-
 ## 1.2 High-Level Stack Overview: Proxmox, Ceph, OpenShift, Percona, Citus, AIMA, and Ansible
 
 The iDempiere AIMA platform relies on a tightly integrated, highly resilient technology stack structured across five functional layers, fully managed through automated Infrastructure-as-Code pipelines.
 
-```
-+---------------------------------------------------------------------------------------------------+
-|                                 iDempiere AIMA FULL SYSTEM STACK                                  |
-+---------------------------------------------------------------------------------------------------+
-| LAYER 5: APPLICATION & AI ENGINE                                                                  |
-| - iDempiere Core ERP (v11/v12) | AIMA OSGi Extension | Java 17/21 LTS | Apache Felix Engine       |
-+---------------------------------------------------------------------------------------------------+
-| LAYER 4: DISTRIBUTED DATA & SECURITY                                                              |
-| - Percona Operator | Citus 5-Node Cluster | SEPostgreSQL | Row-Level Security (RLS) | PgBouncer   |
-+---------------------------------------------------------------------------------------------------+
-| LAYER 3: CONTAINER ORCHESTRATION & SERVICE MESH                                                    |
-| - Red Hat OpenShift Container Platform (3 Control / 3 Worker Nodes on RHEL 10 VMs)                |
-| - OVN-Kubernetes CNI | OpenShift Ingress Router | Red Hat OpenShift GitOps (ArgoCD)            |
-+---------------------------------------------------------------------------------------------------+
-| LAYER 2: AUTOMATION & ORCHESTRATION                                                               |
-| - Ansible Automation Controller / AAP | Execution Environments | Vault Integration                |
-+---------------------------------------------------------------------------------------------------+
-| LAYER 1: BARE-METAL INFRASTRUCTURE & VIRTUALIZATION                                               |
-| - 5-Node Proxmox VE Cluster | Integrated Ceph Storage (RBD / CephFS) | 100GbE Mesh Network      |
-+---------------------------------------------------------------------------------------------------+
-
-```
+![iDempiere AIMA FULL SYSTEM STACK](assets/images/ch1/1-2-iDempiere-AIMA-FULL-SYSTEM-STACK.png)
 
 ### Stack Component Matrix
 
