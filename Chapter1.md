@@ -6,6 +6,8 @@ In the era of Industry 4.0 and Smart Manufacturing, conventional Enterprise Reso
 
 The **iDempiere AIMA (AI-Based Manufacturing Infrastructure & Architecture)** initiative redefines enterprise operational technology by transforming the core ERP engine from a retrospective database into an active, predictive intelligence platform.
 
+![TRADITIONAL vs. AIMA ERP PARADIGM](assets/images/ch1/1-1-TRADITIONAL-vs-AIMA-ERP-PARADIGM.png)
+
 ```
 +---------------------------------------------------------------------------------------------------+
 |                                  TRADITIONAL vs. AIMA ERP PARADIGM                                |
