@@ -59,34 +59,11 @@ Adopting the iDempiere AIMA architecture delivers measurable improvements across
 * **Immutable Infrastructure Lifecycles**: Full Ansible IaC automation guarantees that all environments (Development, Staging, Production) are reproducible, fully auditable, and configuration-drift compliant.
 * **Multi-Tenant Isolation**: Combining Row-Level Security (RLS) with SEPostgreSQL (Mandatory Access Control) ensures complete data isolation across corporate entities, business units, and external supply chain partners within a unified database instance.
 
----
-
 ## 1.4 Target Audience Guidelines
 
 This blueprint is designed for four primary enterprise engineering personas. The table below outlines how each role should navigate and execute the instructions provided throughout this document:
 
-```
-+---------------------------------------------------------------------------------------------------+
-|                                     ROLE-BASED GUIDANCE MATRIX                                    |
-+---------------------------------------------------------------------------------------------------+
-| ROLE                     | PRIMARY FOCUS SECTIONS          | KEY RESPONSIBILITIES                 |
-| -------------------------| ------------------------------- | ------------------------------------ |
-| Infrastructure Engineers | Section 2 (Proxmox/Ceph)        | Host clustering, Ceph pool design,   |
-|                          | Section 3 (Ansible IaC)         | 100GbE networking, VM provisioning.  |
-| -------------------------| ------------------------------- | ------------------------------------ |
-| Platform & DevOps        | Section 3 (Ansible Automation)  | OpenShift deployment, GitOps,        |
-| Engineers                | Section 4 (OpenShift/CNI)       | Operator lifecycle, Velero backups.  |
-| -------------------------| ------------------------------- | ------------------------------------ |
-| Database Administrators  | Section 5 (Percona/Citus/RLS)   | Database sharding, SEPostgreSQL MAC, |
-| & Security Specialists   | Section 7 (pgBackRest/PITR)     | RLS policy design, WAL tuning.        |
-| -------------------------| ------------------------------- | ------------------------------------ |
-| ERP Developers &         | Section 6 (iDempiere/AIMA OSGi) | OSGi bundle development, AIMA ML     |
-| Implementers             | Section 8 (Developer Setup)     | engine tuning, iDempiere dictionary. |
-+---------------------------------------------------------------------------------------------------+
-
-```
-
----
+![ROLE-BASED GUIDANCE MATRIX](assets/images/ch1/1-4-ROLE-BASED-GUIDANCE-MATRIX.png)
 
 ## 1.5 Hands-On Environment Verification & Pre-Flight Checks
 
